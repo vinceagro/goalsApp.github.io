@@ -1,0 +1,393 @@
+html {
+    box-sizing: border-box;
+
+}
+
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('background4.jpg');
+    background-repeat: none;
+    background-size: contain;
+
+}
+
+.fa-list-ul {
+    margin: 10px;
+}
+
+.input {
+    width: 100%;
+    text-align: center;
+    border: 0;
+    font-family: 'Dosis', sans-serif;
+    border-radius: 1em;
+    background-color: transparent;
+    outline: none;
+    color: rgba(0, 0, 0, 0.86);
+    text-transform: uppercase;
+
+
+}
+
+
+.deleted-container .item-trash {
+    display: none;
+}
+
+.deleted-container .item-check {
+    display: none;
+}
+
+.completed-container .item-check {
+    display: none;
+}
+
+.completed-container .item-trash {
+    display: none;
+}
+
+.none {
+    display: none;
+}
+
+
+#app-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    padding: 4rem 0;
+    justify-content: center;
+}
+
+.bodyToDo {
+    border: 4px solid rgba(0, 0, 0, 0.76);
+    border-radius: 0.3rem;
+    display: flex;
+    flex: 0 1 70%;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    overflow: auto;
+    height: 41rem;
+    font-size: 13px;
+}
+
+.heads-container {
+    display: flex;
+    justify-content: center;
+}
+
+.headlines-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.head {
+    font-family: 'Dosis', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.3rem;
+    display: flex;
+    flex: 6.5;
+    padding: 10px;
+    text-align: left;
+    display: inline;
+    color: rgba(0, 0, 0, 0.86);
+    text-transform: uppercase;
+
+}
+
+.date {
+    font-family: 'Dosis', sans-serif;
+    letter-spacing: 0.3rem;
+    display: flex;
+    flex: 1.5;
+    padding: 10px;
+    text-align: center;
+    display: inline;
+    color: rgba(0, 0, 0, 0.86);
+    text-transform: uppercase;
+
+}
+
+
+.head-container {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+}
+
+
+
+.container {
+    display: flex;
+    flex: 0 1;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    background-color: red;
+}
+
+.inputDiv {
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+
+}
+
+.item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
+    animation: fadeIn 0.5s ease-in;
+}
+
+.divButtons {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.divButtons :not(:last-child) {
+    margin-right: 1rem;
+}
+
+.divInput {
+    display: flex;
+    flex: 2;
+    justify-content: center;
+    color: rgba(0, 0, 0, 0.86);
+
+}
+
+.divInput input {
+    width: 15rem;
+    text-align: center;
+    border: 0;
+    font-family: 'Dosis', sans-serif;
+    text-transform: uppercase;
+    border-radius: 1em;
+    background-color: transparent;
+    color: rgba(0, 0, 0, 0.86);
+    font-style: ;
+}
+
+
+
+
+::placeholder {
+    color: rgba(0, 0, 0, 0.86);
+    text-transform: uppercase;
+    font-family: 'Dosis', sans-serif;
+
+
+}
+
+
+
+.buttons {
+    background-color: transparent;
+    border: 0.5px solid rgba(255, 255, 255, 0);
+    padding: 0.3em;
+    margin: 0 0.2em 0.2em 0;
+    border-radius: 20rem;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.86);
+    text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
+    text-align: center;
+    transition: all 0.15s;
+}
+
+
+
+.buttons:hover {
+    color: rgba(0, 0, 255, 0.734);
+    border-color: rgba(0, 0, 255, 0.334);
+    text-shadow: mediumblue;
+}
+
+.fa-trash:hover {
+    color: rgba(255, 0, 0, 0.734);
+    border-color: rgba(255, 0, 0, 0.334);
+}
+
+.fa-check:hover {
+    color: rgba(0, 255, 0, 0.734);
+    border-color: rgba(0, 255, 0, 0.334);
+}
+
+
+
+
+.buttons:active {
+    animation: buttonFade 0.2s ease-in;
+}
+
+.buttons:focus {
+    outline: 0;
+}
+
+.remove-button {
+    display: none;
+}
+
+.divInput .selected {
+    border: 1px solid rgba(19, 0, 128, 0.062);
+    outline: none;
+    border-radius: 0.3rem;
+    ;
+
+}
+
+
+.buttons-counter {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+
+}
+
+.countdown {
+    color: rgba(255, 0, 0, 0.734);
+    width: 10px;
+    font-size: 12px;
+}
+
+.counter {
+    margin: 0 10px 0 10px;
+    color: rgba(255, 0, 0, 0.734);
+
+
+}
+
+.counterButton {
+    color: rgba(255, 0, 0, 0.734);
+    border-color: rgba(255, 0, 0, 0.334);
+    animation: buttonFade 0.2s ease-in;
+}
+
+.input-buttons {}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes buttonFade {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.containers {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+}
+
+.current-container {
+    font-family: 'Dosis', sans-serif;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.86);
+    flex: 1;
+    border-radius: 0.3rem;
+    text-align: center;
+    overflow: auto;
+    margin: 0 10px 0 5px;
+
+}
+
+.deleted-container {
+    font-family: 'Dosis', sans-serif;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.86);
+    flex: 1;
+    border-radius: 0.3rem;
+    text-align: center;
+    overflow: auto;
+    margin: 0 5px 0 5px;
+
+}
+
+.cur-goals {
+    background-color: rgba(0, 0, 255, 0.052);
+}
+
+
+.del-goals {
+    background-color: rgba(255, 0, 0, 0.052);
+}
+
+.completed-container {
+    font-family: 'Dosis', sans-serif;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.86);
+    flex: 1;
+    border-radius: 0.3rem;
+    text-align: center;
+    overflow: auto;
+    margin: 0 5px 0 10px;
+
+}
+
+.compl-goals {
+    background-color: rgba(72, 255, 0, 0.052);
+    ;
+}
+
+@media screen and (max-width: 660px) {
+    .bodyToDo {
+        font-size: 12px;
+    }
+
+    .containers {
+        display: inline-block;
+    }
+
+    .current-container {
+        padding: 0px 0 10px 0;
+        margin: 0 5px 0 5px;
+
+    }
+
+    .deleted-container {
+        padding: 0px 0 10px 0;
+        margin: 0 5px 0 5px;
+    }
+
+    .completed-container {
+        padding: 0px 0 10px 0;
+        margin: 0 5px 0 5px;
+
+    }
+}
