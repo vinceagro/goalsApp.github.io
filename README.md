@@ -1,1 +1,1 @@
-# goals App ES5
+# goals App ES5/6
